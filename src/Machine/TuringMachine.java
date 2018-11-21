@@ -20,6 +20,7 @@ public class TuringMachine
     private ArrayList<Character> inputAlphabet;
 
     private String input;
+
     /**
      * Constructs the turing machine
      * from the specification file.
@@ -88,7 +89,21 @@ public class TuringMachine
                         this.reject = line;
                         break;
                     default:
-                        // Transitions
+                        //  Transitions
+                        //  Transition Order:
+                        //      Current State
+                        //      Tape Character
+                        //      Next State
+                        //      Character to write to tape
+                        //      Movement Direction
+                        String instructions [] = line.split(" ");
+                        State currentState = getState( instructions[0]);
+                        if ( currentState == null )
+                        {
+                            //  Invalid file format. Abort
+                            System.exit(0);
+                        }
+                        currentState.addTransition(instructions);
                         break;
                 }
                 counter += 1;
@@ -143,9 +158,8 @@ public class TuringMachine
         return ( getState ( this.accept ));
     }
 
-    public boolean isAccept (State test)
+    public boolean isState ( String name )
     {
-        return ( test.getName().equals(getAccept()));
+        return ( getState(name) == null );
     }
-
 }
