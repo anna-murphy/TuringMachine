@@ -8,11 +8,11 @@ Q1 Q2 Q3 Q4 Q5 QAccept QReject
 0
 # Gamma
 0 x u
-# Start State
+# Start Machine.State
 Q1
-# Accept State
+# Accept Machine.State
 QAccept
-# Reject State
+# Reject Machine.State
 QReject
 
 # delta

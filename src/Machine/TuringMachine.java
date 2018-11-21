@@ -1,3 +1,7 @@
+package Machine;
+
+import Machine.State;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -72,15 +76,15 @@ public class TuringMachine
                         }
                         break;
                     case ( 3 ):
-                        // Start State
+                        // Start Machine.State
                         this.start = line;
                         break;
                     case ( 4 ):
-                        //  Accept State
+                        //  Accept Machine.State
                         this.accept = line;
                         break;
                     case ( 5 ):
-                        // Reject State
+                        // Reject Machine.State
                         this.reject = line;
                         break;
                     default:
@@ -105,7 +109,7 @@ public class TuringMachine
      * @return Correct state, or null if it doesn't
      * exist.
      */
-    public State getState ( String stateName )
+    public State getState (String stateName )
     {
         for ( State s : this.states )
         {

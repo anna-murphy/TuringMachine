@@ -1,3 +1,5 @@
+package Machine;
+
 public class State
 {
     private String name;
