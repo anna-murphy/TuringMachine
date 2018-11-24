@@ -25,8 +25,18 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Machine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="941">
-              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+            <state relative-caret-position="1055">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.9.tm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3.9.tm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -35,7 +45,7 @@
       <file leaf-file-name="Transition.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Machine/Transition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5031">
+            <state relative-caret-position="3870">
               <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
               <folding>
                 <element signature="docComment;method#Transition#0;class#Transition#0" expanded="false" />
@@ -56,17 +66,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TuringMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TuringMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Machine/TuringMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="941">
-              <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="819">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="docComment;method#TuringMachine#0;class#TuringMachine#0" expanded="false" />
                 <element signature="e#1331#1369#0" expanded="false" />
                 <element signature="e#3319#3334#0" expanded="false" />
                 <element signature="docComment;method#getState#0;class#TuringMachine#0" expanded="false" />
-                <element signature="method#getState#0;class#TuringMachine#0" expanded="false" />
                 <element signature="docComment;method#getStart#0;class#TuringMachine#0" expanded="false" />
                 <element signature="docComment;method#printStates#0;class#TuringMachine#0" expanded="false" />
                 <element signature="method#printConfig#0;class#TuringMachine#0" expanded="false" />
@@ -78,7 +87,7 @@
       <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Machine/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
+            <state relative-caret-position="-1634">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="docComment;method#toString#0;class#State#0" expanded="false" />
@@ -116,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/TuringMachine.java" />
         <option value="$PROJECT_DIR$/src/Machine/Main.java" />
-        <option value="$PROJECT_DIR$/src/Machine/TuringMachine.java" />
         <option value="$PROJECT_DIR$/src/Machine/Transition.java" />
         <option value="$PROJECT_DIR$/src/Machine/State.java" />
+        <option value="$PROJECT_DIR$/src/Machine/TuringMachine.java" />
       </list>
     </option>
   </component>
@@ -359,16 +368,15 @@
       <option name="presentableId" value="Default" />
       <updated>1542740209764</updated>
       <workItem from="1542740215897" duration="4456000" />
-      <workItem from="1543017252319" duration="9872000" />
+      <workItem from="1543017252319" duration="10439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14328000" />
+    <option name="totallyTimeSpent" value="14895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="97" y="-12" width="2651" height="1848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -379,7 +387,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -410,7 +418,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -479,17 +487,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Machine/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="941">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="-1634">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#toString#0;class#State#0" expanded="false" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="docComment;method#addTransition#0;class#State#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Machine/TuringMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#TuringMachine#0;class#TuringMachine#0" expanded="false" />
+            <element signature="e#1331#1369#0" expanded="false" />
+            <element signature="e#3319#3334#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#TuringMachine#0" expanded="false" />
+            <element signature="docComment;method#getStart#0;class#TuringMachine#0" expanded="false" />
+            <element signature="docComment;method#printStates#0;class#TuringMachine#0" expanded="false" />
+            <element signature="method#printConfig#0;class#TuringMachine#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Machine/Transition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5031">
+        <state relative-caret-position="3870">
           <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
           <folding>
             <element signature="docComment;method#Transition#0;class#Transition#0" expanded="false" />
@@ -509,35 +540,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine/State.java">
+    <entry file="file://$PROJECT_DIR$/src/Machine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#toString#0;class#State#0" expanded="false" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="docComment;method#addTransition#0;class#State#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1055">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Machine/TuringMachine.java">
+    <entry file="file://$PROJECT_DIR$/3.9.tm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="941">
-          <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#TuringMachine#0;class#TuringMachine#0" expanded="false" />
-            <element signature="e#1331#1369#0" expanded="false" />
-            <element signature="e#3319#3334#0" expanded="false" />
-            <element signature="docComment;method#getState#0;class#TuringMachine#0" expanded="false" />
-            <element signature="method#getState#0;class#TuringMachine#0" expanded="false" />
-            <element signature="docComment;method#getStart#0;class#TuringMachine#0" expanded="false" />
-            <element signature="docComment;method#printStates#0;class#TuringMachine#0" expanded="false" />
-            <element signature="method#printConfig#0;class#TuringMachine#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

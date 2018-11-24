@@ -138,7 +138,7 @@ public class TuringMachine
     {
         for ( State s : this.states )
         {
-            System.out.println("\t" + s);
+            //System.out.println("\t" + s);
             if ( s.getName().equals( stateName ))
             {
                 return ( s );
