@@ -36,8 +36,13 @@ public class Main
                 System.out.println(ioe);
                 System.exit(0);
             }
+            if (inputString.equals("exit"))
+            {
+                System.out.println("Exiting...");
+                System.exit(1);
+            }
             //  Process string
-
+            tm.run(inputString);
         }
     }
 }

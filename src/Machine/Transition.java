@@ -27,27 +27,66 @@ public class Transition
      */
     public Transition (TuringMachine tm, String instructions [])
     {
-        this.startingState = tm.getState(instructions[0]);
-        this.tapeCharacter = instructions[1].charAt(0);
-        this.returnState = tm.getState(instructions[2]);
-        this.writeCharacter = instructions[3].charAt(0);
-        if (instructions[4] == "R")
+        System.out.println("Adding a transition: ");
+        for ( String s : instructions )
         {
-            this.direction = 1;
+            System.out.println("\t'" + s + "'");
         }
-        else if (instructions[4] =="L")
+        int counter = 0;
+        for (String token : instructions)
         {
-            this.direction = -1;
+            if (token.length() == 0)
+            {
+                continue;
+            }
+            switch (counter)
+            {
+                case (0):
+                    //  Starting state
+                    this.startingState = tm.getState(token);
+                    break;
+                case (1):
+                    //  Tape Character
+                    this.tapeCharacter = token.charAt(0);
+                    break;
+                case (2):
+                    //  Return State
+                    this.returnState = tm.getState(token);
+                    break;
+                case (3):
+                    //  Written character
+                    this.writeCharacter = token.charAt(0);
+                    break;
+                case (4):
+                    //  Direction
+                    if (token.equals("R"))
+                    {
+                        this.direction = 1;
+                    }
+                    else if (token.equals("L"))
+                    {
+                        this.direction = -1;
+                    }
+                    else
+                    {
+                        // Invalid file format.
+                        System.out.println(
+                                "Invalid direction in creating a transition.");
+                        System.exit(0);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            counter += 1;
         }
-        else
-        {
-            // Invalid file format.
-            System.exit(0);
-        }
+        //  Check for null states.
         if (this.startingState == null ||
                 this.returnState ==null)
         {
             //  Invalid file format.
+            System.out.println(
+                    "State not found in creating a transition.");
             System.exit(0);
         }
     }
@@ -62,9 +101,9 @@ public class Transition
         return "( " +
                 returnState.getName() +  ", " +
                 this.tapeCharacter +  " ) -> ( " +
-                this.returnState + ", " +
+                this.returnState.getName() + ", " +
                 this.writeCharacter + ", " +
-                direction.toString() + " )";
+                direction + " )";
     }
 
     /**

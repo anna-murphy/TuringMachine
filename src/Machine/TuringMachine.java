@@ -19,7 +19,10 @@ public class TuringMachine
     private ArrayList<Character> tapeAlphabet;
     private ArrayList<Character> inputAlphabet;
 
-    private String input;
+    /// Tape
+    private int machineHead;
+    private ArrayList<Character> tape;
+    private State currentState;
 
     /**
      * Constructs the turing machine
@@ -34,6 +37,8 @@ public class TuringMachine
         this.states = new ArrayList<>();
         this.tapeAlphabet = new ArrayList<>();
         this.inputAlphabet = new ArrayList<>();
+        this.tape = new ArrayList<>();
+        this.machineHead = 0;
         // Open File
         try
         {
@@ -43,8 +48,10 @@ public class TuringMachine
             int counter = 0;
             while ( line != null )
             {
+                //System.out.println("Line: " + line);
                 // Ignore Comments
-                if ( line.startsWith("#") )
+                if ( line.startsWith("#") ||
+                        line.length() == 0)
                 {
                     line = fileIn.readLine();
                     continue;
@@ -57,7 +64,8 @@ public class TuringMachine
                         String split [] = line.split( " " );
                         for ( String token : split )
                         {
-                            states.add( new State ( token ));
+                            states.add( new State (this, token ));
+                            System.out.println("Added state: " + token);
                         }
                         break;
                     case ( 1 ):
@@ -97,10 +105,12 @@ public class TuringMachine
                         //      Character to write to tape
                         //      Movement Direction
                         String instructions [] = line.split(" ");
+                        System.out.println("Adding Transition to state: " + instructions[0]);
                         State currentState = getState( instructions[0]);
                         if ( currentState == null )
                         {
                             //  Invalid file format. Abort
+                            System.out.println("State not found.");
                             System.exit(0);
                         }
                         currentState.addTransition(instructions);
@@ -128,6 +138,7 @@ public class TuringMachine
     {
         for ( State s : this.states )
         {
+            System.out.println("\t" + s);
             if ( s.getName().equals( stateName ))
             {
                 return ( s );
@@ -161,5 +172,55 @@ public class TuringMachine
     public boolean isState ( String name )
     {
         return ( getState(name) == null );
+    }
+
+    /**
+     * Dumps the contents of the
+     * turing machine into the terminal.
+     */
+    public void printStates ()
+    {
+        for (State s : this.states)
+        {
+            System.out.println(s);
+        }
+    }
+
+    public String printConfig ()
+    {
+        String config = "";
+        for (int i = 0; i < this.tape.size(); i++)
+        {
+            if (i == this.machineHead)
+            {
+                config += this.currentState;
+            }
+            config += tape.get(i);
+        }
+        return (config);
+    }
+
+    /**
+     * Function that takes a string and
+     * determines if it is in the language.
+     * @param input from user.
+     */
+    public void run (String input)
+    {
+        //  Load the input into the tape.
+        for ( Character c : input.toCharArray())
+        {
+            this.tape.add(c);
+        }
+        this.currentState = getState(this.start);
+        while ( true )
+        {
+            printConfig();
+            if (this.currentState.getName().equals(this.accept))
+            {
+                break;
+            }
+            //  
+        }
     }
 }
