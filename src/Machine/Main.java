@@ -36,9 +36,9 @@ public class Main
                 System.out.println(ioe);
                 System.exit(0);
             }
-            if (inputString.equals("exit"))
+            if (inputString.length() == 0)
             {
-                System.out.println("Exiting...");
+                System.out.println("Goodbye");
                 System.exit(1);
             }
             //  Process string

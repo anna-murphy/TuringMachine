@@ -46,6 +46,18 @@ public class State
     }
 
     /**
+     * Gets a transition from the hash table
+     * @param tapeChar character on the tape
+     * @return the transition with that state
+     * character pair.
+     */
+    public Transition getTranstion (Character tapeChar)
+    {
+        return (this.transitionTable.get(tapeChar));
+    }
+
+
+    /**
      * Adds a transition object to the hash
      * table of transition the object has
      * @param instructions array received from

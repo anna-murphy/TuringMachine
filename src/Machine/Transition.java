@@ -27,11 +27,7 @@ public class Transition
      */
     public Transition (TuringMachine tm, String instructions [])
     {
-        System.out.println("Adding a transition: ");
-        for ( String s : instructions )
-        {
-            System.out.println("\t'" + s + "'");
-        }
+        //System.out.println("Adding a transition: ");
         int counter = 0;
         for (String token : instructions)
         {
@@ -89,6 +85,31 @@ public class Transition
                     "State not found in creating a transition.");
             System.exit(0);
         }
+    }
+
+    /**
+     * The following 5 methods are
+     * getters for the class variables.
+     * @return
+     */
+    public State getStartingState()
+    {
+        return startingState;
+    }
+
+    public State getReturnState()
+    {
+        return returnState;
+    }
+
+    public Character getWriteCharacter()
+    {
+        return writeCharacter;
+    }
+
+    public Integer getDirection()
+    {
+        return direction;
     }
 
     /**

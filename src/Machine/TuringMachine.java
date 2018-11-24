@@ -65,7 +65,7 @@ public class TuringMachine
                         for ( String token : split )
                         {
                             states.add( new State (this, token ));
-                            System.out.println("Added state: " + token);
+                            //System.out.println("Added state: " + token);
                         }
                         break;
                     case ( 1 ):
@@ -105,7 +105,7 @@ public class TuringMachine
                         //      Character to write to tape
                         //      Movement Direction
                         String instructions [] = line.split(" ");
-                        System.out.println("Adding Transition to state: " + instructions[0]);
+                        //System.out.println("Adding Transition to state: " + instructions[0]);
                         State currentState = getState( instructions[0]);
                         if ( currentState == null )
                         {
@@ -193,7 +193,7 @@ public class TuringMachine
         {
             if (i == this.machineHead)
             {
-                config += this.currentState;
+                config += this.currentState.getName();
             }
             config += tape.get(i);
         }
@@ -215,12 +215,33 @@ public class TuringMachine
         this.currentState = getState(this.start);
         while ( true )
         {
-            printConfig();
+            System.out.println(printConfig());
             if (this.currentState.getName().equals(this.accept))
             {
                 break;
             }
-            //  
+            //  Do the transition
+            Transition t = this.currentState.getTranstion(this.tape.get(machineHead));
+            if (t == null)
+            {
+                //  No transition, go to reject
+                this.currentState = getState(this.reject);
+                System.out.println(printConfig());
+                break;
+            }
+            else
+            {
+                this.currentState = t.getReturnState();
+                this.tape.set(this.machineHead, t.getWriteCharacter());
+                this.machineHead += t.getDirection();
+                if (this.machineHead == this.tape.size())
+                {
+                    this.tape.add("u".charAt(0));
+                }
+            }
         }
+        this.tape = new ArrayList<>();
+        this.machineHead = 0;
+        this.currentState = getState(this.start);
     }
 }
