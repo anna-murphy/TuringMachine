@@ -4,13 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main
+public class TM
 {
     public static void main ( String args [] )
     {
         BufferedReader inputReader = new BufferedReader(
                 new InputStreamReader(System.in));
-        System.out.println("Turing Machine Specification File:  ");
+        System.out.print("Turing Machine Specification File:  ");
         String filename = "";
         try
         {

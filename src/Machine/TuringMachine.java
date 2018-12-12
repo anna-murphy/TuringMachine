@@ -1,7 +1,5 @@
 package Machine;
 
-import Machine.State;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -61,7 +59,7 @@ public class TuringMachine
                 {
                     case ( 0 ):
                         // States
-                        String split [] = line.split( " " );
+                        String split [] = line.split( "[ ]+" );
                         for ( String token : split )
                         {
                             states.add( new State (this, token ));
@@ -70,7 +68,7 @@ public class TuringMachine
                         break;
                     case ( 1 ):
                         //  Input Alphabet
-                        String inSymbols [] = line.split ( " " );
+                        String inSymbols [] = line.split ( "[ ]+" );
                         for ( String symbol : inSymbols )
                         {
                             inputAlphabet.add( symbol.charAt( 0 ));
@@ -78,7 +76,7 @@ public class TuringMachine
                         break;
                     case ( 2 ):
                         // Tape Alphabet
-                        String tSymbols [] = line.split ( " " );
+                        String tSymbols [] = line.split ( "[ ]+" );
                         for ( String symbol : tSymbols )
                         {
                             tapeAlphabet.add( symbol.charAt( 0 ));
@@ -104,8 +102,7 @@ public class TuringMachine
                         //      Next State
                         //      Character to write to tape
                         //      Movement Direction
-                        String instructions [] = line.split(" ");
-                        //System.out.println("Adding Transition to state: " + instructions[0]);
+                        String instructions [] = line.split("[ ]+");
                         State currentState = getState( instructions[0]);
                         if ( currentState == null )
                         {
