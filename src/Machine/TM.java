@@ -25,7 +25,7 @@ public class TM
         while ( true )
         {
             //  Read input
-            System.out.println("--> ");
+            System.out.print("--> ");
             String inputString = "";
             try
             {

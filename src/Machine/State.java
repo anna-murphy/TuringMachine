@@ -65,10 +65,6 @@ public class State
      */
     public void addTransition ( String instructions [] )
     {
-        for ( String s : instructions )
-        {
-            System.out.println("'" + s + "'");
-        }
         this.transitionTable.put(
                 instructions[1].charAt(0),
                 new Transition(this.machine, instructions));
